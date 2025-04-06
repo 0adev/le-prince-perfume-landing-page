@@ -2,13 +2,21 @@ import React from "react";
 import "./header.css";
 import heroGlow from "../../assets/hero-glow.svg";
 import arrowSvg from "../../assets/arrow-down.svg";
+import star from "../../assets/sparkle.png";
+import customerOne from "../../assets/asset-25.webp";
+import customerTwo from "../../assets/asset-26.webp";
 
 const Header = () => {
   return (
     <div className="princedlf__header section__margin">
       <div className="princedlf__header-container d-grid place-items-center grid-auto-flow-column h-100 mx-auto--my-0 py-3">
         <div className="first-column w-100 h-100 d-grid place-items-end">
-          <div className="image"></div>
+          <div className="image">
+            <p className="d-grid place-items-start-center gap-2 text-center text-balance fw-regular fs-1 marhey-ff padding-3">
+              <img src={star} alt="" width={30} />
+              ثباتية عالية تدوم طوال اليوم
+            </p>
+          </div>
         </div>
         <div className="second-column">
           <div className="first-copy d-grid place-items-center gap-7">
@@ -35,7 +43,25 @@ const Header = () => {
           </div>
         </div>
         <div className="last-column d-grid place-items-start justify-content-sb w-100 h-100">
-          <div className="image"></div>
+          <div className="image position-relative">
+            <div className="customers position-absolute d-flex align-items-center gap-2">
+              <div className="customers-image d-flex position-relative">
+                <img
+                  src={customerOne}
+                  alt=""
+                  width={45}
+                  className="b-r-rounded-circle"
+                />
+                <img
+                  src={customerTwo}
+                  alt=""
+                  width={45}
+                  className="b-r-rounded-circle"
+                />
+              </div>
+              <span className="fw-medium fs-1 marhey-ff">عملاء سعداء</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

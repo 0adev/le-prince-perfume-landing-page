@@ -1,3 +1,7 @@
+.princedlf__header {
+  margin-block: 8.5rem 3rem;
+}
+
 .princedlf__header .first-column .image,
 .princedlf__header .last-column .image {
   border-radius: 150px;
@@ -11,6 +15,24 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.princedlf__header .first-column p {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid #00000027;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.028);
+  backdrop-filter: blur(40px);
+  box-shadow: 0px 0px 20px rgba(208, 127, 40, 0.312);
+  position: absolute;
+  top: -3rem;
+  right: -1rem;
+}
+
+.princedlf__header .first-column p img {
+  place-self: end center;
 }
 
 /* hero second column */
@@ -70,6 +92,16 @@
   background-size: cover;
 }
 
+.princedlf__header .last-column .customers {
+  top: -50%;
+  left: 10%;
+}
+
+.princedlf__header .last-column .customers-image img:first-of-type {
+  position: absolute;
+  right: -2rem;
+}
+
 /* hovring styles */
 .primary-header .nav-links a:not(.primary-btn, .socialm-icon):hover,
 .primary-header .nav-links .close:hover {
@@ -103,6 +135,10 @@
     border-radius: 20px;
     width: calc(100% - 5rem);
     height: 30rem;
+  }
+
+  .princedlf__header .last-column .customers {
+    display: none;
   }
 
   .princedlf__header .second-column > .second-copy {
