@@ -1,0 +1,9 @@
+.princedlf__sectionHeader div {
+  background-color: #ffe5c3;
+  padding: 0.5rem 0.875rem;
+  border-radius: 30px;
+}
+
+.princedlf__sectionHeader h2 {
+  font-size: clamp(var(--fs-300), 4vw, var(--fs-600));
+}

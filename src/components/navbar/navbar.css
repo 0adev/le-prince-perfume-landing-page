@@ -1,0 +1,54 @@
+.princedlf__navbar {
+  padding: 0.5rem 2rem;
+  padding-bottom: 2rem;
+  background-color: #ffeecd3a;
+  backdrop-filter: blur(40px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+.princedlf__navbar .logo img {
+  width: 5rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.princedlf__navbar-menu_container {
+  background-color: rgb(255, 233, 197);
+  background-image: url(../../assets/hero-glow.svg);
+  background-position: 20% 0%;
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  box-shadow: 2px 2px 0px var(--dark-600);
+  border: 1px solid var(--dark-700);
+  border-radius: 30px;
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  max-width: 100%;
+  height: 30rem;
+}
+
+.princedlf__navbar li > a:hover {
+  color: var(--brown);
+}
+
+.princedlf__navbar .primary-btn:hover {
+  background-color: transparent;
+  outline: 1px solid var(--dark-800);
+  color: var(--dark-800);
+}
+
+@media screen and (max-width: 48.5rem) {
+  .princedlf__navbar-menu {
+    display: block;
+  }
+  .princedlf__navbar-links,
+  .princedlf__navbar-links + div {
+    display: none;
+  }
+}
