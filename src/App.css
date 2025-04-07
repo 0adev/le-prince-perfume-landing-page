@@ -436,3 +436,9 @@ body {
   background-color: var(--regular-peach);
   position: relative;
 }
+
+@media screen and (max-width: 65rem) {
+  .section__margin {
+    margin: 2rem 2rem;
+  }
+}

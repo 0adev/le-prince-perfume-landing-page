@@ -100,9 +100,9 @@ const Navbar = () => {
         )}
         {toggleMenu && (
           <div className="princedlf__navbar-menu_container d-grid place-items-center">
-            <div className="princedlf__navbar-menu_container-links d-grid gap-6 place-items-center text-center">
-              <div className="d-grid gap-6">
-                <Menu className={"d-grid gap-3"} />
+            <div className="princedlf__navbar-menu_container-links d-grid gap-7 place-items-center text-center">
+              <div className="d-grid gap-7">
+                <Menu className={"d-grid gap-4"} />
                 <a
                   href="#order"
                   class="primary-btn text-deco text-light fs-1 fw-medium bg-dark border-none padding-3 b-r-rounded cursor-pointer transition"
