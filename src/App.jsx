@@ -1,6 +1,6 @@
 import "./App.css";
 import { Navbar, Brand } from "./components";
-import { Header, Feature, Collection, Order } from "./containers";
+import { Header, Features, Collection, Order } from "./containers";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Navbar />
         <Header />
         <Brand />
-        <Feature />
+        <Features />
         <Collection />
         <Order />
       </div>

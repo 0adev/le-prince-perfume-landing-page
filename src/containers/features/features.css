@@ -1,0 +1,14 @@
+.princedlf__features {
+  background-image: url("../../assets/featureCover.png");
+  background-position: center;
+  background-size: 302vh 99%;
+  background-repeat: no-repeat;
+  margin-inline: 0;
+  padding-block-end: 5rem;
+}
+
+.princedlf__features-container {
+  max-width: calc(100% - 20rem);
+  margin: 0 auto;
+  margin-block-start: 6rem;
+}
