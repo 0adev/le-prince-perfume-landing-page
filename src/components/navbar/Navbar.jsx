@@ -70,7 +70,10 @@ const Navbar = () => {
   }
 
   return (
-    <div className="princedlf__navbar d-flex justify-content-sp align-items-end flex-row-reverse">
+    <div
+      className="princedlf__navbar d-flex justify-content-sp align-items-end flex-row-reverse"
+      data-aos="fade-down"
+    >
       <div className="princedlf__navbar-links-logo">
         <a href="#" className="logo">
           <img src={logo} alt="le prince de la fragrance brand" width={100} />

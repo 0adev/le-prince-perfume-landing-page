@@ -3,7 +3,7 @@ import "./feature.css";
 
 function Feature({ image, icon, title, paragraph }) {
   return (
-    <div className="princedlf__feature">
+    <div className="princedlf__feature" data-aos="zoom-in-down">
       <div className="princedlf__feature-container d-grid gap-7 place-items-center">
         <div className="princedlf__feature-container-image position-relative">
           <img src={image} alt="" />

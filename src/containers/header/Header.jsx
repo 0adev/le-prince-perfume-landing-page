@@ -10,7 +10,10 @@ const Header = () => {
   return (
     <div className="princedlf__header section__margin">
       <div className="princedlf__header-container d-grid place-items-center grid-auto-flow-column h-100 mx-auto--my-0 py-3">
-        <div className="first-column w-100 h-100 d-grid place-items-end">
+        <div
+          className="first-column w-100 h-100 d-grid place-items-end"
+          data-aos="fade-left"
+        >
           <div className="image">
             <p className="d-grid place-items-start-center gap-2 text-center text-balance fw-regular fs-1 marhey-ff padding-3">
               <img src={star} alt="" width={30} />
@@ -18,7 +21,7 @@ const Header = () => {
             </p>
           </div>
         </div>
-        <div className="second-column">
+        <div className="second-column" data-aos="zoom-out">
           <div className="first-copy d-grid place-items-center gap-7">
             <h1 className="primary-heading fw-bold text-primary text-center text-wrap">
               <img src={heroGlow} alt="" />
@@ -42,10 +45,16 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="last-column d-grid place-items-start justify-content-sb w-100 h-100">
+        <div
+          className="last-column d-grid place-items-start justify-content-sb w-100 h-100"
+          data-aos="fade-right"
+        >
           <div className="image position-relative">
             <div className="customers position-absolute d-flex align-items-center gap-2">
-              <div className="customers-image d-flex position-relative">
+              <div
+                className="customers-image d-flex position-relative"
+                data-aos="fade-down"
+              >
                 <img
                   src={customerOne}
                   alt=""

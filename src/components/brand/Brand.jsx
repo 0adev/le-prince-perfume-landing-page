@@ -16,7 +16,7 @@ import "./brand.css";
 
 const Brand = () => {
   return (
-    <div className="princedlf__brands">
+    <div className="princedlf__brands" data-aos="zoom-in">
       <div className="princedlf__brands-slider">
         <div className="item item1">
           <img src={Lacoste} alt="" />
