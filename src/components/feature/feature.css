@@ -2,7 +2,7 @@
   border: 2px solid var(--brown);
   border-radius: calc(20px + 2rem);
   position: sticky;
-  top: 10rem;
+  top: 8rem;
   overflow: hidden;
   max-width: 1100px;
   width: 100%;
@@ -76,5 +76,8 @@
   }
   .princedlf__feature-content p {
     text-wrap: balance;
+  }
+  .princedlf__feature-container-image > img:first-of-type {
+    height: 18rem;
   }
 }

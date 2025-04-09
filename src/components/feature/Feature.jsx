@@ -11,7 +11,7 @@ function Feature({ image, icon, title, paragraph }) {
         </div>
         <div className="princedlf__feature-content d-grid place-content-center gap-3 ">
           <h3 className="title marhey-ff fw-semibold fs-4 text-red">{title}</h3>
-          <p className="fs-3 fw-semibold text-wrap">{paragraph}</p>
+          <p className="fs-3 fw-semibold text-balance">{paragraph}</p>
         </div>
       </div>
     </div>
