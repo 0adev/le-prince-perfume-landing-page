@@ -311,6 +311,9 @@ textarea:not([rows]) {
 .place-items-end {
   place-items: end;
 }
+.place-content-center {
+  place-content: center;
+}
 .items-start {
   align-items: start;
 }
