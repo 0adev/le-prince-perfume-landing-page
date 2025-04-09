@@ -1,0 +1,168 @@
+.princedlf__collection > .princedlf__collection-container {
+  width: calc(100% - 8rem);
+  margin: 4rem auto;
+}
+
+.princedlf__collection .princedlf__collection-container > * > .container {
+  width: 26rem;
+  border: 2px solid var(--dark-700);
+  cursor: grab;
+  border-radius: 30px;
+}
+
+.princedlf__collection
+  .princedlf__collection-container
+  > *
+  > .container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.princedlf__collection .princedlf__collection-container img {
+  width: 100%;
+  min-height: 33rem;
+  object-fit: cover;
+}
+
+.princedlf__collection .card-content h3 {
+  font-size: clamp(var(--fs-300), 6vw, var(--fs-700));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.princedlf__collection .card-content a {
+  flex-direction: row-reverse;
+  bottom: -2rem;
+  right: 2rem;
+  transition: 400ms ease;
+}
+
+.princedlf__collection .card-content a > img {
+  width: 3.5rem;
+  min-height: fit-content;
+  object-fit: contain;
+}
+
+/* hovring */
+.princedlf__collection
+  .princedlf__collection-container
+  > *
+  > .container:hover
+  .card-content
+  a {
+  bottom: 0.875rem;
+}
+
+.princedlf__collection .women > .container:hover::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(175, 64, 64, 0.513)
+  );
+}
+.princedlf__collection .men > .container:hover::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(93, 66, 40, 0.513)
+  );
+}
+
+/* media queries */
+@media (max-width: 65rem) {
+  .princedlf__collection > .princedlf__collection-container {
+    width: calc(100% - 2rem);
+    margin-block: 3rem;
+    gap: 2rem;
+  }
+  .princedlf__collection .princedlf__collection-container > * > .container {
+    width: 24rem;
+    height: 28rem;
+  }
+}
+
+@media (max-width: 50rem) {
+  .princedlf__collection > .princedlf__collection-container {
+    width: calc(100% - 1rem);
+    gap: 1.25rem;
+  }
+  .princedlf__collection .princedlf__collection-container > * > .container {
+    width: 20rem;
+    height: 24rem;
+  }
+  .princedlf__collection .card-content a {
+    font-size: var(--fs-100);
+    gap: 0.5rem;
+  }
+  .princedlf__collection .card-content a > img {
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 43rem) {
+  .princedlf__collection > .princedlf__collection-container {
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+  .princedlf__collection .princedlf__collection-container > * > .container {
+    width: 28rem;
+    height: 30rem;
+    box-shadow: 10px 10px 0 var(--beige-500);
+  }
+  .princedlf__collection .card-content h3 {
+    font-size: clamp(var(--fs-300), 12vw, var(--fs-700));
+  }
+}
+
+@media (max-width: 30rem) {
+  .princedlf__collection {
+    gap: 2rem;
+  }
+  .princedlf__collection .princedlf__collection-container > * > .container {
+    width: 24rem;
+    height: 28rem;
+  }
+
+  .princedlf__collection .women > .container::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(175, 64, 64, 0.513)
+    );
+    pointer-events: none;
+  }
+  .princedlf__collection .men > .container::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(93, 66, 40, 0.513)
+    );
+    pointer-events: none;
+  }
+  .princedlf__collection .card-content a {
+    pointer-events: none;
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 27rem) {
+  .princedlf__collection .princedlf__collection-container > * > .container {
+    width: 20rem;
+    height: 24rem;
+  }
+  .princedlf__collection .card-content h3 {
+    top: 1rem;
+    left: 2rem;
+    transform: none;
+  }
+}
+
+@media (max-width: 22rem) {
+  .princedlf__collection .princedlf__collection-container > * > .container {
+    width: 18rem;
+    height: 20rem;
+  }
+}

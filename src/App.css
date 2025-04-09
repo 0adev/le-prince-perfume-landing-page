@@ -438,6 +438,7 @@ body {
   min-height: 100vh;
   background-color: var(--regular-peach);
   position: relative;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 65rem) {
