@@ -110,7 +110,8 @@
   .princedlf__collection .princedlf__collection-container > * > .container {
     width: 28rem;
     height: 30rem;
-    box-shadow: 10px 10px 0 var(--beige-500);
+    /* box-shadow: 10px 10px 0 var(--beige-500); */
+    box-shadow: 10px 10px 0 #ffe5c3;
   }
   .princedlf__collection .card-content h3 {
     font-size: clamp(var(--fs-300), 12vw, var(--fs-700));
