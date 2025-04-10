@@ -84,9 +84,9 @@
   }
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 55rem) {
   .princedlf__collection > .princedlf__collection-container {
-    width: calc(100% - 1rem);
+    width: 100%;
     gap: 1.25rem;
   }
   .princedlf__collection .princedlf__collection-container > * > .container {
@@ -102,7 +102,7 @@
   }
 }
 
-@media (max-width: 43rem) {
+@media (max-width: 46rem) {
   .princedlf__collection > .princedlf__collection-container {
     flex-direction: column;
     gap: 3.5rem;
@@ -118,7 +118,7 @@
   }
 }
 
-@media (max-width: 30rem) {
+@media (max-width: 36rem) {
   .princedlf__collection {
     gap: 2rem;
   }
@@ -149,7 +149,7 @@
   }
 }
 
-@media (max-width: 27rem) {
+@media (max-width: 30rem) {
   .princedlf__collection .princedlf__collection-container > * > .container {
     width: 20rem;
     height: 24rem;
@@ -161,7 +161,7 @@
   }
 }
 
-@media (max-width: 22rem) {
+@media (max-width: 26rem) {
   .princedlf__collection .princedlf__collection-container > * > .container {
     width: 18rem;
     height: 20rem;

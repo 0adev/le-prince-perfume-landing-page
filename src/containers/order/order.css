@@ -122,6 +122,7 @@
 @media (max-width: 77.875rem) {
   .princedlf__order {
     width: calc(100% - 6rem);
+    margin-top: 2rem;
   }
 }
 

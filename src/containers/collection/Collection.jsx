@@ -7,7 +7,7 @@ const Collection = () => {
   // const [showMenCollection, setShowMenCollection] = useState(false);
 
   return (
-    <div className="princedlf__collection section__margin">
+    <div className="princedlf__collection section__margin o-hidden">
       <SectionHeader title={"قائمة العطور"} subTitle={"استمتع بأرقى الروائح"} />
       <div className="princedlf__collection-container d-flex justify-content-center align-items-center gap-7">
         {/* <!-- men collection --> */}
