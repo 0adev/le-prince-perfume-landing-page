@@ -1,11 +1,17 @@
 import React from "react";
 import { SectionHeader } from "../../components";
+import CtaButton from "../../components/ctaButton/CtaButton";
 import logo from "../../assets/logo.webp";
 import "./order.css";
 
 const Order = () => {
   return (
-    <div className="princedlf__order section__margin" data-aos="fade-up">
+    <div
+      className="princedlf__order section__margin"
+      data-aos="fade-up"
+      id="order"
+    >
+      <CtaButton />
       <SectionHeader title={"طلب المنتج"} subTitle={"عطرك المفضل بانتظارك"} />
       <div className="princedlf__order-container w-100 d-flex">
         {/* <!-- left side (image) --> */}
@@ -31,7 +37,7 @@ const Order = () => {
             <div className="perfumes-offer d-grid gap-3 primary-ff">
               <label
                 className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-                for="offer"
+                htmlFor="offer"
               >
                 إختر العرض :
               </label>
@@ -65,7 +71,7 @@ const Order = () => {
             {/* <!-- perfume name feild --> */}
             <label
               className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-              for="perfume-name"
+              htmlFor="perfume-name"
             >
               اسم العطر :
             </label>
@@ -81,7 +87,7 @@ const Order = () => {
               <div className="name d-grid gap-2 w-100">
                 <label
                   className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-                  for="user-name"
+                  htmlFor="user-name"
                 >
                   الاسم الكامل :
                 </label>
@@ -97,7 +103,7 @@ const Order = () => {
               <div className="phone-number d-grid gap-2 w-100">
                 <label
                   className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-                  for="user-phone"
+                  htmlFor="user-phone"
                 >
                   رقم الهاتف :
                 </label>
@@ -113,7 +119,7 @@ const Order = () => {
             {/* <!-- city feild --> */}
             <label
               className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-              for="user-city"
+              htmlFor="user-city"
             >
               المدينة :
             </label>
@@ -127,7 +133,7 @@ const Order = () => {
             {/* <!-- address feild --> */}
             <label
               className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-              for="user-address"
+              htmlFor="user-address"
             >
               العنوان :
             </label>

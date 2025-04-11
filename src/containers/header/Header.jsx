@@ -1,14 +1,11 @@
-import React from "react";
 import "./header.css";
-import heroGlow from "../../assets/hero-glow.svg";
-import arrowSvg from "../../assets/arrow-down.svg";
-import star from "../../assets/sparkle.png";
-import customerOne from "../../assets/asset-25.webp";
-import customerTwo from "../../assets/asset-26.webp";
+import { heroGlow, arrowSvg, star, customerOne, customerTwo } from "./index";
+import CtaButton from "../../components/ctaButton/CtaButton";
 
 const Header = () => {
   return (
-    <div className="princedlf__header section__margin">
+    <div className="princedlf__header section__margin o-hidden" id="header">
+      <CtaButton />
       <div className="princedlf__header-container d-grid place-items-center grid-auto-flow-column h-100 mx-auto--my-0 py-3">
         <div
           className="first-column w-100 h-100 d-grid place-items-end"

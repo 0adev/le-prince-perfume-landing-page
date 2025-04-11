@@ -16,7 +16,7 @@ const Collection = () => {
   // const [closeCatalog, setCloseCtalog] = useState(true);
 
   return (
-    <div className="princedlf__collection section__margin">
+    <div className="princedlf__collection section__margin" id="collection">
       <SectionHeader title={"قائمة العطور"} subTitle={"استمتع بأرقى الروائح"} />
       <div className="princedlf__collection-container d-flex justify-content-center align-items-center gap-7 position-relative">
         {showMenCollection && (
@@ -80,9 +80,6 @@ const Collection = () => {
           </div>
         </div>
       </div>
-      {/* {showMenCollection && (
-        <div className="princedlf__collection-container">HH</div>
-      )} */}
     </div>
   );
 };
