@@ -46,6 +46,33 @@
   object-fit: contain;
 }
 
+.princedlf__collection :where(.men-catalog, .women-catalog) {
+  top: -8rem;
+  z-index: 1;
+  /* width: calc(100% - 30%); */
+  width: 100%;
+  /* min-height: 30vh; */
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 500px rgb(255, 255, 255);
+  display: grid;
+  place-content: center;
+  padding-block: 1rem 3rem;
+  padding-inline: 2rem;
+}
+.princedlf__collection .men-catalog-container button,
+.princedlf__collection .women-catalog-container button {
+  all: unset;
+  cursor: pointer;
+}
+
+.princedlf__collection .men-catalog-container img,
+.princedlf__collection .women-catalog-container img {
+  width: 100%;
+  aspect-ratio: 2 / 1.35;
+  object-fit: contain;
+}
+
 /* hovring */
 .princedlf__collection
   .princedlf__collection-container
@@ -110,11 +137,13 @@
   .princedlf__collection .princedlf__collection-container > * > .container {
     width: 28rem;
     height: 30rem;
-    /* box-shadow: 10px 10px 0 var(--beige-500); */
     box-shadow: 10px 10px 0 #ffe5c3;
   }
   .princedlf__collection .card-content h3 {
     font-size: clamp(var(--fs-300), 12vw, var(--fs-700));
+  }
+  .princedlf__collection :where(.women-catalog) {
+    top: 25rem;
   }
 }
 
@@ -144,7 +173,6 @@
     pointer-events: none;
   }
   .princedlf__collection .card-content a {
-    pointer-events: none;
     bottom: 1rem;
   }
 }
@@ -158,6 +186,15 @@
     top: 1rem;
     left: 2rem;
     transform: none;
+  }
+  .princedlf__collection :where(.women-catalog) {
+    top: -8rem;
+  }
+  .princedlf__collection .men-catalog-container img,
+  .princedlf__collection .women-catalog-container img {
+    width: initial;
+    aspect-ratio: 0.34;
+    object-fit: contain;
   }
 }
 
