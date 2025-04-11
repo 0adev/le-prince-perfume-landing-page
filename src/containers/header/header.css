@@ -1,5 +1,6 @@
 .princedlf__header {
   margin-block: 8.5rem 3rem;
+  overflow-x: hidden;
 }
 
 .princedlf__header .first-column .image,
