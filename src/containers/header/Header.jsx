@@ -4,7 +4,7 @@ import CtaButton from "../../components/ctaButton/CtaButton";
 
 const Header = () => {
   return (
-    <div className="princedlf__header section__margin o-hidden" id="header">
+    <div className="princedlf__header section__margin" id="header">
       <CtaButton />
       <div className="princedlf__header-container d-grid place-items-center grid-auto-flow-column h-100 mx-auto--my-0 py-3">
         <div

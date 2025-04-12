@@ -160,6 +160,7 @@
 @media (max-width: 43rem) {
   .princedlf__header {
     margin-block: 7rem 0;
+    overflow: hidden;
   }
 }
 
