@@ -12,11 +12,11 @@ const CtaButton = () => {
       if (!header || !orderSection) return;
 
       const headerBottom = header.getBoundingClientRect().bottom;
-      const orderTop = orderSection.getBoundingClientRect().top;
+      const orderBottom = orderSection.getBoundingClientRect().top;
 
       const isSmallScreen = window.innerWidth < 768;
-      const hasScrolledPastHeader = headerBottom <= 600;
-      const isAboveOrderSection = orderTop < 800;
+      const hasScrolledPastHeader = headerBottom <= 550;
+      const isAboveOrderSection = orderBottom <= 600;
 
       // Show CTA only if:
       // 1. On small screen
