@@ -1,0 +1,15 @@
+.princedlf__testimonial-header img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.princedlf__testimonial-name h3 {
+  color: var(--dark-800);
+  font-weight: var(--semiBold);
+}
+
+.princedlf__testimonial-content p {
+  color: var(--dark-700);
+  font-size: clamp(var(--fs-100), 2vw, var(--fs-150));
+  font-weight: var(--semiBold);
+}

@@ -1,0 +1,77 @@
+.princedlf__testimonials-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  margin-top: 3rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -400px;
+  }
+}
+
+.princedlf__testimonials-container .princedlf__testimonial {
+  background-color: #fff4e4;
+  border: 1px solid var(--dark-800);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  display: grid;
+  place-content: start;
+  gap: 1.5rem;
+  direction: ltr;
+  position: absolute;
+  left: max(calc(320px * 6), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 22rem;
+  height: 18rem;
+}
+
+.princedlf__testimonials-container > *:first-child {
+  animation-delay: calc(60s / 6 * (6 - 1) * -1);
+}
+
+.princedlf__testimonials-container > *:nth-child(2) {
+  animation-delay: calc(60s / 6 * (6 - 2) * -1);
+}
+
+.princedlf__testimonials-container > *:nth-child(3) {
+  animation-delay: calc(60s / 6 * (6 - 3) * -1);
+}
+
+.princedlf__testimonials-container > *:nth-child(4) {
+  animation-delay: calc(60s / 6 * (6 - 4) * -1);
+}
+
+.princedlf__testimonials-container > *:nth-child(5) {
+  animation-delay: calc(60s / 6 * (6 - 5) * -1);
+}
+
+.princedlf__testimonials-container > *:last-child {
+  animation-delay: calc(60s / 6 * (6 - 6) * -1);
+}
+
+@media screen and (max-width: 45rem) {
+  .princedlf__testimonials-container {
+    margin-top: 0;
+  }
+  .princedlf__testimonials-container .princedlf__testimonial {
+    left: max(calc(270px * 6), 100%);
+    width: 20rem;
+  }
+}

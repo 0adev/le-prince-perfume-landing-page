@@ -5,5 +5,9 @@
 }
 
 .princedlf__sectionHeader h2 {
-  font-size: clamp(var(--fs-300), 4vw, var(--fs-600));
+  font-size: clamp(var(--fs-250), 4.5vw, var(--fs-600));
+  max-width: 25ch;
+  width: 100%;
+  line-height: 1.5;
+  text-wrap: wrap;
 }
