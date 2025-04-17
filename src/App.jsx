@@ -6,6 +6,7 @@ import {
   Collection,
   Order,
   Testimonials,
+  Contact,
 } from "./containers";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,6 +30,7 @@ function App() {
         <Collection />
         <Order />
         <Testimonials />
+        <Contact />
       </div>
     </>
   );

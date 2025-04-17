@@ -41,7 +41,11 @@ const Order = () => {
               >
                 إختر العرض :
               </label>
-              <select name="offer" id="offer">
+              <select
+                name="offer"
+                id="offer"
+                defaultValue={"5 عطور + 2 عطور هدية 🎁  = 349 درهم"}
+              >
                 <option
                   className="primary-ff fw-medium fs-2 text-primary"
                   value="اختر العرض الخاص بك"
@@ -51,7 +55,6 @@ const Order = () => {
                 <option
                   className="primary-ff fw-medium fs-2 text-primary"
                   value="2 عطور + 1 عطر هدية  🎁  = 199 درهم "
-                  selected
                 >
                   2 عطور + 1 عطر هدية 🎁 = 199 درهم
                 </option>
