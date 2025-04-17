@@ -7,11 +7,11 @@
 
 .princedlf__order .princedlf__order-container {
   background: #fff4e4;
-  /* box-shadow: 10px 10px 0 var(--beige-500); */
   box-shadow: 10px 10px 0 #ffe5c3;
   border: 2px solid #202020;
   border-radius: 20px;
   padding: 1.5rem;
+  z-index: 99;
 }
 
 /* Left Side */
@@ -139,6 +139,7 @@
 @media (max-width: 43rem) {
   .princedlf__order {
     width: calc(100% - 3rem);
+    margin-bottom: 5rem;
   }
 
   .princedlf__order .right-side {

@@ -14,7 +14,7 @@ import "./features.css";
 
 const Features = () => {
   return (
-    <div className="princedlf__features section__margin">
+    <div className="princedlf__features section__margin" id="features">
       <SectionHeader title={"لماذا أخترتنا؟"} subTitle={"ميزاتنا الأساسية"} />
       <div className="princedlf__features-container d-grid gap-8">
         {/* first column */}

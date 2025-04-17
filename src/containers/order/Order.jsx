@@ -32,7 +32,7 @@ const Order = () => {
           <div className="logo w-100 d-flex align-items-center justify-content-center position-relative">
             <img src={logo} alt="" />
           </div>
-          <form className="w-100 d-grid gap-2">
+          <form className="w-100 d-grid gap-2" action={postMessage}>
             {/* <!-- parfume offer --> */}
             <div className="perfumes-offer d-grid gap-3 primary-ff">
               <label
@@ -51,6 +51,7 @@ const Order = () => {
                 <option
                   className="primary-ff fw-medium fs-2 text-primary"
                   value="2 عطور + 1 عطر هدية  🎁  = 199 درهم "
+                  selected
                 >
                   2 عطور + 1 عطر هدية 🎁 = 199 درهم
                 </option>
@@ -80,7 +81,7 @@ const Order = () => {
               placeholder="أدخل اسم العطر"
               name="perfume-name"
               id="perfume-name"
-              required=""
+              required
             />
             {/* <!-- user name feild --> */}
             <div className="user-name-phone d-flex gap-5 w-100">
@@ -96,7 +97,7 @@ const Order = () => {
                   placeholder="أدخل اسمك الكامل"
                   name="user-name"
                   id="user-name"
-                  required=""
+                  required
                 />
               </div>
               {/* <!-- phone number feild --> */}
@@ -108,11 +109,12 @@ const Order = () => {
                   رقم الهاتف :
                 </label>
                 <input
-                  type="text"
-                  placeholder="أدخل رقم هاتفك"
+                  type="tel"
+                  pattern="[0-9]{10}"
+                  placeholder="0612345678"
                   name="user-phone"
                   id="user-phone"
-                  required=""
+                  required
                 />
               </div>
             </div>
@@ -128,7 +130,7 @@ const Order = () => {
               placeholder="أدخل اسم مدينتك"
               name="user-city"
               id="user-city"
-              required=""
+              required
             />
             {/* <!-- address feild --> */}
             <label
@@ -142,7 +144,7 @@ const Order = () => {
               placeholder="أدخل عنوانك"
               name="user-address"
               id="user-address"
-              required=""
+              required
             />
             {/* <!-- Submite Button --> */}
             <button

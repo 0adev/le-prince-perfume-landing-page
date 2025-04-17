@@ -19,7 +19,8 @@ const Navbar = () => {
           <li>
             <a
               className="text-deco line-h-1 text-primary fs-2 fw-semibold transition"
-              href="#"
+              href="#features"
+              onClick={() => setToggleMenu(false)}
             >
               المميزات
             </a>
@@ -27,7 +28,8 @@ const Navbar = () => {
           <li>
             <a
               className="text-deco line-h-1 text-primary fs-2 fw-semibold transition"
-              href="#"
+              href="#collection"
+              onClick={() => setToggleMenu(false)}
             >
               قائمة العطور
             </a>
@@ -35,7 +37,8 @@ const Navbar = () => {
           <li>
             <a
               className="text-deco line-h-1 text-primary fs-2 fw-semibold transition"
-              href="#"
+              href="#testimonials"
+              onClick={() => setToggleMenu(false)}
             >
               اراء الزبائن
             </a>
@@ -43,7 +46,8 @@ const Navbar = () => {
           <li>
             <a
               className="text-deco line-h-1 text-primary fs-2 fw-semibold transition"
-              href="#"
+              href="#contactUs"
+              onClick={() => setToggleMenu(false)}
             >
               تواصل معنا
             </a>
@@ -109,6 +113,7 @@ const Navbar = () => {
                 <a
                   href="#order"
                   class="primary-btn text-deco text-light fs-1 fw-medium bg-dark border-none padding-3 b-r-rounded cursor-pointer transition"
+                  onClick={() => setToggleMenu(false)}
                 >
                   اطلب عطرك المفضل الان
                 </a>

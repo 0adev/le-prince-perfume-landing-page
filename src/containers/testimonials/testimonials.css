@@ -67,7 +67,7 @@
 }
 
 @media screen and (max-width: 45rem) {
-  .princedlf__testimonials-container {
+  .princedlf__testimonials > * {
     margin-top: 0;
   }
   .princedlf__testimonials-container .princedlf__testimonial {

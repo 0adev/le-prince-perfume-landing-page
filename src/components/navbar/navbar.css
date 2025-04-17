@@ -6,7 +6,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99;
+  z-index: 999;
   box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.208);
 }
 
@@ -17,12 +17,8 @@
 }
 
 .princedlf__navbar-menu_container {
-  background-color: rgb(255, 233, 197);
-  background-image: url(../../assets/hero-glow.svg);
-  background-position: 20% 0%;
-  background-repeat: no-repeat;
-  background-size: 1000px;
-  box-shadow: 2px 2px 0px var(--dark-600);
+  background-color: #fff4e4;
+  box-shadow: 10px 10px 0 #f5d1a3;
   border: 1px solid var(--dark-700);
   border-radius: 30px;
   position: absolute;
