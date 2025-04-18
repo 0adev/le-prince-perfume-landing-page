@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeader from "../../components/sectionHeader/SectionHeader";
 import { RiPhoneFill, RiWhatsappFill, RiMailFill } from "react-icons/ri";
-import "./ContactUs.css";
+import "./contactUs.css";
 
 function ContactUs() {
   return (
