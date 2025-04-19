@@ -46,7 +46,7 @@ const Navbar = () => {
           <li>
             <a
               className="text-deco line-h-1 text-primary fs-2 fw-semibold transition"
-              href="#contactUs"
+              href="#footer"
               onClick={() => setToggleMenu(false)}
             >
               تواصل معنا

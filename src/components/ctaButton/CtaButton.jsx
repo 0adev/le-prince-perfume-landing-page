@@ -7,26 +7,26 @@ const CtaButton = () => {
   useEffect(() => {
     const handleScroll = () => {
       const header = document.getElementById("header");
-
-      if (!header) return;
+      const footer = document.getElementById("footer");
+      if (!header || !footer) return;
 
       const headerBottom = header.getBoundingClientRect().bottom;
+      const footerTop = footer.getBoundingClientRect().top;
 
       const isSmallScreen = window.innerWidth < 768;
-      const hasScrolledPastHeader = headerBottom <= 550;
+      const hasScrolledPastHeader = headerBottom <= 0;
+      const hasReachedFooter = footerTop <= window.innerHeight;
 
-      // Show CTA only if:
-      // 1. On small screen
-      // 2. Scrolled past header
-      // 3. Not at the top near the order section
-      setShowCTA(isSmallScreen && hasScrolledPastHeader);
+      const shouldShowCTA =
+        isSmallScreen && hasScrolledPastHeader && !hasReachedFooter;
+
+      setShowCTA(shouldShowCTA);
     };
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleScroll);
 
-    // Trigger once on mount
-    handleScroll();
+    handleScroll(); // initial run
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
