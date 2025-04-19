@@ -43,7 +43,10 @@ function Footer() {
           </div>
         </div>
         {/* second item */}
-        <div className="princedlf__links d-flex justify-content-sp align-items-center gap-2">
+        <div
+          className="princedlf__links d-flex justify-content-sp align-items-center gap-2"
+          data-aos="zoom-in"
+        >
           <div className="store__policy-links d-flex align-items-center gap-4">
             <a
               href=""
@@ -69,7 +72,10 @@ function Footer() {
           </div>
         </div>
         {/* third item */}
-        <div className="princedlf__brand d-grid place-items-center">
+        <div
+          className="princedlf__brand d-grid place-items-center"
+          data-aos="zoom-in"
+        >
           <img src={Banner} alt="footer banner" />
         </div>
       </div>
