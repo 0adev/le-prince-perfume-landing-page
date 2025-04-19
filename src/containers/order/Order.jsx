@@ -1,10 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import { SectionHeader } from "../../components";
 import CtaButton from "../../components/ctaButton/CtaButton";
 import logo from "../../assets/logo.webp";
 import "./order.css";
 
 const Order = () => {
+  const [formData, setFormData] = useState({
+    offer: "اختر العرض الخاص بك",
+    perfumeName: "",
+    userName: "",
+    userPhone: "",
+    userCity: "",
+    userAddress: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = e => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" }); // clear error on change
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (formData.offer === "اختر العرض الخاص بك")
+      newErrors.offer = "يرجى اختيار العرض المناسب";
+    if (!formData.perfumeName.trim())
+      newErrors.perfumeName = "يرجى إدخال اسم العطر";
+    if (!formData.userName.trim())
+      newErrors.userName = "يرجى إدخال الاسم الكامل";
+    if (!/^\d{10}$/.test(formData.userPhone))
+      newErrors.userPhone = "رقم الهاتف غير صالح (10 أرقام)";
+    if (!formData.userCity.trim()) newErrors.userCity = "يرجى إدخال المدينة";
+    if (!formData.userAddress.trim())
+      newErrors.userAddress = "يرجى إدخال العنوان";
+    return newErrors;
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setErrors({});
+
+    fetch("https://formsubmit.co/ayoubaguirar101@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        offer: formData.offer,
+        perfumeName: formData.perfumeName,
+        userName: formData.userName,
+        userPhone: formData.userPhone,
+        userCity: formData.userCity,
+        userAddress: formData.userAddress,
+      }),
+    })
+      .then(res => {
+        if (res.ok) {
+          alert("✅ تم إرسال طلبك بنجاح!");
+          setFormData({
+            offer: "اختر العرض الخاص بك",
+            perfumeName: "",
+            userName: "",
+            userPhone: "",
+            userCity: "",
+            userAddress: "",
+          });
+        } else {
+          alert("❌ حدث خطأ أثناء الإرسال. حاول مرة أخرى.");
+        }
+      })
+      .catch(() => alert("❌ لا يمكن إرسال الطلب الآن."));
+  };
+
   return (
     <div
       className="princedlf__order section__margin"
@@ -14,12 +90,9 @@ const Order = () => {
       <CtaButton />
       <SectionHeader title={"طلب المنتج"} subTitle={"عطرك المفضل بانتظارك"} />
       <div className="princedlf__order-container w-100 d-flex">
-        {/* <!-- left side (image) --> */}
         <div className="left-side w-100"></div>
 
-        {/* <!-- right side (form) --> */}
         <div className="right-side w-100 d-grid place-items-center">
-          {/* <!-- form title --> */}
           <div className="title d-grid place-items-center gap-1">
             <h3 className="marhey-ff fs-9 text-primary fw-medium text-center text-beige-700">
               اطلب الآن
@@ -28,135 +101,154 @@ const Order = () => {
               لا تفوت فرصة اقتناء أجمل الروائح
             </p>
           </div>
-          {/* <!-- form logo --> */}
+
           <div className="logo w-100 d-flex align-items-center justify-content-center position-relative">
-            <img src={logo} alt="" />
+            <img src={logo} alt="Logo" />
           </div>
-          <form className="w-100 d-grid gap-2" action={postMessage}>
-            {/* <!-- parfume offer --> */}
+
+          <form className="w-100 d-grid gap-2" onSubmit={handleSubmit}>
+            {/* Offer Selection */}
             <div className="perfumes-offer d-grid gap-3 primary-ff">
               <label
-                className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
                 htmlFor="offer"
+                className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
               >
                 إختر العرض :
               </label>
               <select
                 name="offer"
                 id="offer"
-                defaultValue={"5 عطور + 2 عطور هدية 🎁  = 349 درهم"}
+                value={formData.offer}
+                onChange={handleChange}
               >
-                <option
-                  className="primary-ff fw-medium fs-2 text-primary"
-                  value="اختر العرض الخاص بك"
-                >
-                  اختر العرض الخاص بك
-                </option>
-                <option
-                  className="primary-ff fw-medium fs-2 text-primary"
-                  value="2 عطور + 1 عطر هدية  🎁  = 199 درهم "
-                >
+                <option value="اختر العرض الخاص بك">اختر العرض الخاص بك</option>
+                <option value="2 عطور + 1 عطر هدية  🎁  = 199 درهم ">
                   2 عطور + 1 عطر هدية 🎁 = 199 درهم
                 </option>
-                <option
-                  className="primary-ff fw-medium fs-2 text-primary"
-                  value="3 عطور + 2 عطور هدية 🎁  = 249 درهم"
-                >
+                <option value="3 عطور + 2 عطور هدية 🎁  = 249 درهم">
                   3 عطور + 2 عطور هدية 🎁 = 249 درهم
                 </option>
-                <option
-                  className="primary-ff fw-medium fs-2 text-primary"
-                  value="5 عطور + 2 عطور هدية 🎁  = 349 درهم"
-                >
+                <option value="5 عطور + 2 عطور هدية 🎁  = 349 درهم">
                   5 عطور + 2 عطور هدية 🎁 = 349 درهم
                 </option>
               </select>
+              {errors.offer && (
+                <small className="text-red fw-medium">{errors.offer}</small>
+              )}
             </div>
-            {/* <!-- perfume name feild --> */}
+
+            {/* Perfume Name */}
             <label
+              htmlFor="perfumeName"
               className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-              htmlFor="perfume-name"
             >
               اسم العطر :
             </label>
             <input
               type="text"
+              name="perfumeName"
+              id="perfumeName"
               placeholder="أدخل اسم العطر"
-              name="perfume-name"
-              id="perfume-name"
-              required
+              value={formData.perfumeName}
+              onChange={handleChange}
             />
-            {/* <!-- user name feild --> */}
+            {errors.perfumeName && (
+              <small className="text-red fw-medium">{errors.perfumeName}</small>
+            )}
+
+            {/* Name & Phone */}
             <div className="user-name-phone d-flex gap-5 w-100">
               <div className="name d-grid gap-2 w-100">
                 <label
+                  htmlFor="userName"
                   className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-                  htmlFor="user-name"
                 >
                   الاسم الكامل :
                 </label>
                 <input
                   type="text"
+                  name="userName"
+                  id="userName"
                   placeholder="أدخل اسمك الكامل"
-                  name="user-name"
-                  id="user-name"
-                  required
+                  value={formData.userName}
+                  onChange={handleChange}
                 />
+                {errors.userName && (
+                  <small className="text-red fw-medium">
+                    {errors.userName}
+                  </small>
+                )}
               </div>
-              {/* <!-- phone number feild --> */}
               <div className="phone-number d-grid gap-2 w-100">
                 <label
+                  htmlFor="userPhone"
                   className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-                  htmlFor="user-phone"
                 >
                   رقم الهاتف :
                 </label>
                 <input
                   type="tel"
-                  pattern="[0-9]{10}"
+                  name="userPhone"
+                  id="userPhone"
                   placeholder="0612345678"
-                  name="user-phone"
-                  id="user-phone"
-                  required
+                  value={formData.userPhone}
+                  onChange={handleChange}
                 />
+                {errors.userPhone && (
+                  <small className="text-red fw-medium">
+                    {errors.userPhone}
+                  </small>
+                )}
               </div>
             </div>
-            {/* <!-- city feild --> */}
+
+            {/* City */}
             <label
+              htmlFor="userCity"
               className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-              htmlFor="user-city"
             >
               المدينة :
             </label>
             <input
               type="text"
+              name="userCity"
+              id="userCity"
               placeholder="أدخل اسم مدينتك"
-              name="user-city"
-              id="user-city"
-              required
+              value={formData.userCity}
+              onChange={handleChange}
             />
-            {/* <!-- address feild --> */}
+            {errors.userCity && (
+              <small className="text-red fw-medium">{errors.userCity}</small>
+            )}
+
+            {/* Address */}
             <label
+              htmlFor="userAddress"
               className="primary-ff fw-medium fs-2 text-primary cursor-pointer"
-              htmlFor="user-address"
             >
               العنوان :
             </label>
             <input
               type="text"
+              name="userAddress"
+              id="userAddress"
               placeholder="أدخل عنوانك"
-              name="user-address"
-              id="user-address"
-              required
+              value={formData.userAddress}
+              onChange={handleChange}
             />
-            {/* <!-- Submite Button --> */}
+            {errors.userAddress && (
+              <small className="text-red fw-medium">{errors.userAddress}</small>
+            )}
+
+            {/* Submit */}
             <button
               type="submit"
               className="submit-btn w-100 primary-ff fs-2 fw-medium text-primary cursor-pointer"
             >
               أرسل طلبك
             </button>
-            {/* <!-- Note --> */}
+
+            {/* Note */}
             <div className="note">
               <p className="text-center markazi-ff fw-medium fs-2 line-h-1-2">
                 ملحوظة: مع مراعاة المحافظة على البيئة، نحيط علم زبنائنا الكرام
