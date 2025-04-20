@@ -205,7 +205,7 @@
 @media (max-width: 20rem) {
   /* hero */
   .princedlf__header-container {
-    padding-inline: 1.5rem;
+    padding-inline: 0.5rem;
   }
 
   .princedlf__header .first-copy p {
