@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  width: calc(100% - 25%);
+  font-size: clamp(var(--fs-100), 2vw, var(--fs-250));
   padding: 1.75rem;
   border-radius: 15px;
 }
@@ -12,4 +12,11 @@
 .cta-button:hover {
   background-color: var(--orange);
   outline: 1px solid var(--dark-800);
+}
+
+@media screen and (max-width: 26.563rem) {
+  .cta-button {
+    width: calc(100% - 25%);
+    overflow: hidden;
+  }
 }

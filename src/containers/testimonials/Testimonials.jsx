@@ -13,7 +13,7 @@ import "./testimonials.css";
 
 function Testimonials() {
   return (
-    <div className="princedlf__testimonials section__margin" id="testimonials">
+    <div className="princedlf__testimonials w-100 " id="testimonials">
       <SectionHeader
         title={"آراء بعض المشاهير و الزبناء"}
         subTitle={"جودة استثنائية بشهادة أبرز المؤثرين في المغرب."}

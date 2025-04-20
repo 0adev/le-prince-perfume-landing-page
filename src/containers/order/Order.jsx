@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { SectionHeader } from "../../components";
-import CtaButton from "../../components/ctaButton/CtaButton";
 import logo from "../../assets/logo.webp";
 import "./order.css";
 
@@ -82,12 +81,7 @@ const Order = () => {
   };
 
   return (
-    <div
-      className="princedlf__order section__margin"
-      data-aos="fade-up"
-      id="order"
-    >
-      <CtaButton />
+    <div className="princedlf__order" data-aos="fade-up" id="order">
       <SectionHeader title={"طلب المنتج"} subTitle={"عطرك المفضل بانتظارك"} />
       <div className="princedlf__order-container w-100 d-flex">
         <div className="left-side w-100"></div>

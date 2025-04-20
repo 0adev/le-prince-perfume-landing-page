@@ -6,10 +6,10 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <div className="princedlf__footer" id="footer">
-      <div className="princedlf__footer-container">
+    <div className="princedlf__footer w-100" id="footer">
+      <div className="princedlf__footer-container ">
         {/* first item */}
-        <div className="princedlf__contact d-grid section__margin">
+        <div className="princedlf__contact d-grid">
           <SectionHeader
             title={"اتصل بنا"}
             subTitle={"لا تتردد في التواصل معنا"}
@@ -43,10 +43,7 @@ function Footer() {
           </div>
         </div>
         {/* second item */}
-        <div
-          className="princedlf__links d-flex justify-content-sp align-items-center gap-2"
-          data-aos="zoom-in"
-        >
+        <div className="princedlf__links d-flex justify-content-sp align-items-center gap-2">
           <div className="store__policy-links d-flex align-items-center gap-4">
             <a
               href=""
@@ -72,10 +69,7 @@ function Footer() {
           </div>
         </div>
         {/* third item */}
-        <div
-          className="princedlf__brand d-grid place-items-center"
-          data-aos="zoom-in"
-        >
+        <div className="princedlf__brand d-grid place-items-center">
           <img src={Banner} alt="footer banner" />
         </div>
       </div>

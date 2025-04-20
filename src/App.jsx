@@ -1,5 +1,6 @@
 import "./App.css";
 import { Navbar, Brand } from "./components";
+import CtaButton from "./components/ctaButton/CtaButton";
 import {
   Header,
   Features,
@@ -22,9 +23,10 @@ function App() {
 
   return (
     <>
-      <div className="App primary-ff">
+      <div className="App primary-ff w-100 d-flex align-items-center justify-content-center flex-column">
         <Navbar />
         <Header />
+        <CtaButton />
         <Brand />
         <Features />
         <Collection />

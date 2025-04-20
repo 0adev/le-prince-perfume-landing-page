@@ -223,9 +223,6 @@ textarea:not([rows]) {
 .m-b-start {
   margin-block-start: 4rem;
 }
-.section__margin {
-  margin: 6rem 2rem;
-}
 /* paddings */
 .px {
   padding-inline: 3rem;
@@ -440,9 +437,7 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-@media screen and (max-width: 65rem) {
-  .section__margin {
-    margin: 2rem 2rem;
-  }
-}
+/* 
+* {
+  border: 1px solid red;
+} */

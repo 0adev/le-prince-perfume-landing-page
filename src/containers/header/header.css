@@ -1,5 +1,6 @@
 .princedlf__header {
-  margin-block: 8.5rem 3rem;
+  margin-block: 3rem;
+  width: 100%;
 }
 
 .princedlf__header .first-column .image,
@@ -159,7 +160,7 @@
 
 @media (max-width: 43rem) {
   .princedlf__header {
-    margin-block: 7rem 0;
+    margin-block: 1rem 0;
     overflow: hidden;
   }
 }

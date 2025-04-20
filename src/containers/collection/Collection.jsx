@@ -16,7 +16,10 @@ const Collection = () => {
   // const [closeCatalog, setCloseCtalog] = useState(true);
 
   return (
-    <div className="princedlf__collection section__margin" id="collection">
+    <div
+      className="princedlf__collection w-100 section__margin"
+      id="collection"
+    >
       <SectionHeader title={"قائمة العطور"} subTitle={"استمتع بأرقى الروائح"} />
       <div className="princedlf__collection-container d-flex justify-content-center align-items-center gap-7 position-relative">
         {showMenCollection && (
