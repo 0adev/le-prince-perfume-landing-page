@@ -1,6 +1,7 @@
 .princedlf__order {
   width: calc(100% - 20rem);
-  margin: 8rem auto;
+  margin-inline: auto;
+  margin-block: 1rem 8rem;
   display: grid;
   gap: 4rem;
 }
